@@ -1,16 +1,11 @@
 .App {
-  text-align: center;
+  /* background-color:#c9c9c9; */
 }
+
 
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,6 +23,109 @@
   color: #61dafb;
 }
 
+.array-fare{
+  display:block;
+}
+.react-datepicker-wrapper,
+.react-datepicker__input-container{
+  display:block !important;
+  width:100% !important;
+}
+.detailsForm label{
+  margin-top:10px;
+  margin-bottom:-3px !important;
+  font-size:10px !important;
+}
+input{
+  width:100% !important;
+}
+.row{
+  margin-left:0px !important;
+  margin-right:0px !important;
+}
+
+table thead tr th{
+  text-align: center !important;
+}
+.remove-padding{
+  padding-left:0px !important;
+  padding-right:0px !important;
+}
+
+h6.proposed-headline{
+  margin-top:34px;
+}
+
+.information-headline{
+  padding:0 15px;
+}
+.form-row.sale-information{
+  background-color:#e9e4e4;
+}
+
+.form-row.blackout-information{
+  background-color:#d2d2d2;
+  padding-top:10px;
+}
+.form-row.club49-information{
+  background-color:#fff;
+  padding-top:10px;
+}
+
+.black-color{
+  color:#464545 !important
+}
+.individual-blackout{
+  border:1px solid #ffffff;
+  margin-top:5px;
+  padding-bottom:15px;
+}
+
+.individual-club49{
+  border:1px solid #bebdbd;
+  margin-top:5px;
+  padding-bottom:15px;
+}
+.individual-exception{
+  border-bottom:1px solid #ffffff;
+}
+
+.exception-numbering{
+  position:absolute;
+  left:-3px;
+  top:40px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.add-btn{
+  margin-top:23px;
+}
+.btn.btn-success.add-exception{
+  padding:2px 5px;
+  background-color:#ead019;
+  border-color: #ead019;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.35);
+  /* color:#6d6b6b; */
+}
+.btn.btn-success.download-template{
+  padding:2px 5px;
+  background-color:#5819ea;
+  border-color: #5819ea;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.35);
+  margin-top:15px;
+}
+.btn.remove-exception{
+  height:30px;
+  padding:0px 8px;
+  background-color:#a70606;
+  border-color:#a70606;
+  margin-top:33px;
+}
+.form-group{
+  margin-bottom: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +133,137 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* .form-group-input {
+  padding: 1em;
+  margin: 1em;
+} */
+
+/* input[type=file] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+} */
+
+/* .form-group-input .label {
+  width: 100%;
+  border: 1px dashed #898787;
+  border-radius: 2px;
+  display: block;
+  padding: 0em;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+}
+.form-group-input .label i {
+  display: inline-block;
+  font-size: 25px;
+  padding-top: 10px;
+}
+.form-group-input .label i{
+  color: #898787;
+  transition: 200ms color;
+  font-size:35px;
+}
+.form-group-input .label .title {
+  color: #898787;
+  transition: 200ms color;
+  font-size:25px;
+  position: absolute;
+  margin-top:16px;
+}
+.form-group-input .label:hover {
+  border: 1px solid #898787;
+}
+.form-group-input .label:hover i,
+.form-group-input .label:hover .title {
+  color: #585656;
+} */
+
+#inputFile,
+#cleanFile{
+  margin-top:10px;
+  padding:5px 10px;
+}
+
+#pre-xml-output{
+  overflow-y:auto;
+  width:100%;
+  padding:6px;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-size:11px;
+  height:100%;
+}
+
+#pre-xml-clean{
+  overflow-y:auto;
+  width:100%;
+  padding:6px;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  font-size:11px;
+  height:100%;
+}
+.output-information{
+  width:101%;
+  height:100%;
+  background-color:#7aa4bc;
+}
+
+.btn.btn-success.copy-to-clipboard{
+  padding:2px 5px;
+  background-color:#38a6da;
+  border-color: #38a6da;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.35);
+  margin-top:20px;
+}
+
+.btn.btn-success.clean-xml{
+  padding:2px 5px;
+  background-color:#3c3b3f;
+  border-color: #3c3b3f;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.35);
+  margin-top:15px;
+}
+
+.btn.btn-warning.copy-to-clipboard{
+  padding:2px 10px;
+  margin-top:20px;
+  border-color:#e17329;
+}
+
+#generate-xml{
+  color:#fff;
+}
+
+.text-area-div{
+  width:100%;
+}
+.sharepoint-link{
+  position: relative;
+  top:17px;
+}
+.detailsForm label.radio-inline{
+  font-size:14px !important;
+  margin-top:20px;
+  color:#da9109;
+}
+
+.btn.csv-sale-details{
+  padding:2px 10px;
+  margin-top:20px;
+  margin-right:20px;
+  background-color:#26da49;
+  border-color:#26da49;
+}
+
+.btn.csv-sale-fares{
+  padding:2px 10px;
+  margin-top:20px;
+  background-color:#26dace;
+  border-color:#26dace;
 }

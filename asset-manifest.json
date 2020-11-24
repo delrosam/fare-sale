@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/fare-sale/static/css/main.ff32e7c8.chunk.css",
+    "main.js": "/fare-sale/static/js/main.c28e2aa5.chunk.js",
+    "main.js.map": "/fare-sale/static/js/main.c28e2aa5.chunk.js.map",
+    "runtime-main.js": "/fare-sale/static/js/runtime-main.44f04e95.js",
+    "runtime-main.js.map": "/fare-sale/static/js/runtime-main.44f04e95.js.map",
+    "static/css/2.5cbd10d4.chunk.css": "/fare-sale/static/css/2.5cbd10d4.chunk.css",
+    "static/js/2.73537625.chunk.js": "/fare-sale/static/js/2.73537625.chunk.js",
+    "static/js/2.73537625.chunk.js.map": "/fare-sale/static/js/2.73537625.chunk.js.map",
+    "static/js/3.8920ec71.chunk.js": "/fare-sale/static/js/3.8920ec71.chunk.js",
+    "static/js/3.8920ec71.chunk.js.map": "/fare-sale/static/js/3.8920ec71.chunk.js.map",
+    "index.html": "/fare-sale/index.html",
+    "static/css/2.5cbd10d4.chunk.css.map": "/fare-sale/static/css/2.5cbd10d4.chunk.css.map",
+    "static/css/main.ff32e7c8.chunk.css.map": "/fare-sale/static/css/main.ff32e7c8.chunk.css.map",
+    "static/js/2.73537625.chunk.js.LICENSE.txt": "/fare-sale/static/js/2.73537625.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44f04e95.js",
+    "static/css/2.5cbd10d4.chunk.css",
+    "static/js/2.73537625.chunk.js",
+    "static/css/main.ff32e7c8.chunk.css",
+    "static/js/main.c28e2aa5.chunk.js"
+  ]
+}

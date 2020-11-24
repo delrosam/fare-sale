@@ -3346,19 +3346,11 @@ class App extends Component {
                       <h3 className="information-headline">Sale Information 2:</h3>
                     </div>
                     <div className="form-group col-md-2">
-                      {/* <a href="TEMPLATE.xlsx" download className="btn btn-success download-template">
-                          <i className="fa fa-download"></i> Download Template
-                      </a> */
-                      // https://alaskaair.sharepoint.com/sites/PublishedPricing/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FPublishedPricing%2FShared%20Documents%2FSales%2FDetail%20and%20Fare%20Dumps
-                      }
-                      <a href="https://alaskaair.sharepoint.com/sites/PublishedPricing/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FPublishedPricing%2FShared%20Documents%2FSales%2FDetail%20and%20Fare%20Dumps" target="_blank" rel="noopener noreferrer" className="sharepoint-link">
-                          <i className="fa fa-upload"></i> DROP CSV FILES HERE
-                      </a>
+
+
                     </div>
                     <div className="form-group col-md-2">
-                      <a href="https://alaskaair.sharepoint.com/sites/TeamEP/Shared%20Documents/Forms/AllItems.aspx?cid=91ab9bff-77b0-4540-88d4-c8aacfe4cb04&RootFolder=%2Fsites%2FTeamEP%2FShared%20Documents%2F3-Campaigns%2FFare%20Sales%2FWeeklyFlightDeals&FolderCTID=0x012000B3CE6DC9828D0441B10382FB20A01BBC" rel="noopener noreferrer" target="_blank" className="sharepoint-link">
-                          <i className="fa fa-folder"></i> Sharepoint
-                      </a>
+
                     </div>
 
                     <div className="form-group col-md-1">

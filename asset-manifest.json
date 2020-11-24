@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fare-sale/static/css/main.ff32e7c8.chunk.css",
-    "main.js": "/fare-sale/static/js/main.c28e2aa5.chunk.js",
-    "main.js.map": "/fare-sale/static/js/main.c28e2aa5.chunk.js.map",
+    "main.js": "/fare-sale/static/js/main.18735820.chunk.js",
+    "main.js.map": "/fare-sale/static/js/main.18735820.chunk.js.map",
     "runtime-main.js": "/fare-sale/static/js/runtime-main.44f04e95.js",
     "runtime-main.js.map": "/fare-sale/static/js/runtime-main.44f04e95.js.map",
     "static/css/2.5cbd10d4.chunk.css": "/fare-sale/static/css/2.5cbd10d4.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.5cbd10d4.chunk.css",
     "static/js/2.73537625.chunk.js",
     "static/css/main.ff32e7c8.chunk.css",
-    "static/js/main.c28e2aa5.chunk.js"
+    "static/js/main.18735820.chunk.js"
   ]
 }

@@ -688,6 +688,17 @@ const city_caps_conversion = [
     Airport_Code: "CDB",
     City_Name: "Cold Bay"
   },
+  {
+    AVFM_name: "FORT MYERS",
+    Airport_Code: "RSW",
+    City_Name: "Fort Myers"
+  },
+  {
+    AVFM_name: "JACKSON HOLE",
+    Airport_Code: "JAC",
+    City_Name: "Jackson Hole"
+  },
+
 
  ];
 
@@ -1407,13 +1418,15 @@ class App extends Component {
           days_availability = this.state.days_availability_within_alaska;
 
 
+
+
           doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' CLUB 49 -  UPPER: '+array_counter_upper+' Fares');
-          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
           .ele('DealInfo', {'code': 'CLUB_49_SALE', 'dealType':'Saver', 'url':''})
             .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
             .ele('DealTitle').up()
             .ele('DealDescrip', '<![CDATA[Purchase by '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+'.]]>').up()
-            .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel within Alaska is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
+            .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel within Alaska is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. Seats are limited and may not be available on all flights or all days. If nonstop service is offered during the advertised travel period, the advertised fare applies to the nonstop flights only. Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
             .up()
             let fares_layer = deal_set.ele('Fares');
           item["upper_lower"].map((item2) => {
@@ -1434,7 +1447,7 @@ class App extends Component {
           days_availability = this.state.days_availability_to_us;
 
           doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' CLUB 49 -  LOWER: '+array_counter_lower+' Fares');
-          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
           .ele('DealInfo', {'code': 'CLUB_49_SALE', 'dealType':'Saver', 'url':''})
             .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
             .ele('DealTitle').up()
@@ -1459,7 +1472,7 @@ class App extends Component {
           days_availability = this.state.days_availability_hawaii;
 
           doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' CLUB 49 -  LOWER: '+array_counter_lower+' Fares');
-          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+          let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
           .ele('DealInfo', {'code': 'CLUB_49_SALE', 'dealType':'Saver', 'url':''})
             .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
             .ele('DealTitle').up()
@@ -1653,12 +1666,12 @@ class App extends Component {
 
         //console.log(item);
         doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' '+item["name"]);
-        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
           .ele('DealInfo', {'code': getMyYear(this.state.sale_start_date)+''+getMyMonth(this.state.sale_start_date)+''+getMyDay(this.state.sale_start_date)+'_SALE-'+item["name"], 'dealType': d_type, 'url':''})
           .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
           .ele('DealTitle').up()
           .ele('DealDescrip', '<![CDATA[Purchase by '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+'.]]>').up()
-          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
+          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Seats are limited and may not be available on all flights or all days. If nonstop service is offered during the advertised travel period, the advertised fare applies to the nonstop flights only. Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
           .up()
           let fares_layer = deal_set.ele('Fares');
 
@@ -1872,12 +1885,12 @@ class App extends Component {
 
         //console.log(item);
         doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' '+item["name"]);
-        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
         .ele('DealInfo', {'code': getMyYear(this.state.sale_start_date)+''+getMyMonth(this.state.sale_start_date)+''+getMyDay(this.state.sale_start_date)+'_SALE-'+item["name"], 'dealType':d_type, 'url':''})
           .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
           .ele('DealTitle').up()
           .ele('DealDescrip', '<![CDATA[Purchase by '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+'.]]>').up()
-          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
+          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Seats are limited and may not be available on all flights or all days. If nonstop service is offered during the advertised travel period, the advertised fare applies to the nonstop flights only. Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
           .up()
           let fares_layer = deal_set.ele('Fares');
 
@@ -2079,12 +2092,12 @@ class App extends Component {
 
         //console.log(item);
         doc.com(getMyMonth(this.state.sale_start_date)+'/'+getMyDay(this.state.sale_start_date)+' '+item["name"]+' EXCEPTION');
-        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59-07:00'})
+        let deal_set = doc.ele('DealSet', {'from':this.state.sale_start_date_string+'T00:00:01', 'to':this.state.sale_end_date_string+'T23:59:59'})
         .ele('DealInfo', {'code': getMyYear(this.state.sale_start_date)+''+getMyMonth(this.state.sale_start_date)+''+getMyDay(this.state.sale_start_date)+'_SALE-'+item["name"], 'dealType':d_type, 'url':''})
           .ele('TravelDates', {'startdate':start_date+'T00:00:01', 'enddate':end_date+'T23:59:59'}).up()
           .ele('DealTitle').up()
           .ele('DealDescrip', '<![CDATA[Purchase by '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+'.]]>').up()
-          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
+          .ele('terms','<![CDATA[<strong>Fare Rules:</strong> Purchase by 11:59 pm (PT) on '+makeDateMonthInEnglish(this.state.sale_end_date)+' '+getMyDay(this.state.sale_end_date)+', '+getMyYear(this.state.sale_end_date)+', and at least '+this.state.advance_purchase+' prior to departure. Travel from '+item["origin_city"]+' ('+item["origin_code"]+') to '+item["destination_city"]+' ('+item["destination_code"]+') is valid '+days_availability+' from '+makeDateMonthInEnglish(travel_start)+' '+getMyDay(travel_start)+', '+getMyYear(travel_start)+' - '+makeDateMonthInEnglish(travel_end)+' '+getMyDay(travel_end)+', '+getMyYear(travel_end)+'. '+service_begin_sentence+''+service_ends_sentence+''+black_out_date_sentence+'Seats are limited and may not be available on all flights or all days. If nonstop service is offered during the advertised travel period, the advertised fare applies to the nonstop flights only. Bag fees <a href="#terms">may apply</a> for <a href="/content/travel-info/baggage/checked-bags">checked baggage</a>. See <a href="#terms">bottom of page</a> for full terms and conditions.]]>').up()
           .up()
           let fares_layer = deal_set.ele('Fares');
           if(f_type === 'Miles'){
